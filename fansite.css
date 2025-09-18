@@ -13,6 +13,7 @@ section {
 
 p {
     font-size: 0.9rem;
+    line-height: 1.2rem;
 }
 
 a {
@@ -83,7 +84,7 @@ header nav ul li {
     display: flex;
     justify-content: center; 
     align-items: center;     
-    height: 30px;            
+    height: 25px;            
     border-radius: 5px;
     padding: 0.3rem 1rem;     
 }
@@ -91,7 +92,6 @@ header nav ul li {
 header nav ul li a {
     width: 100%;             
     text-align: center;      
-    line-height: 40px;       
     display: block;          
 }
 
@@ -234,11 +234,15 @@ padding: 0.6em 1.4em;
   color: rgb(40, 40, 150);
 }
 
+/* #news p:first-of-type,#photos p{
+    line-height: 1.5rem;
+} */
+
 .images-container h3 span {
     font-style: italic;
 }
 
-iframe {
+#videos iframe {
   width: 100%;
   height: auto;
   aspect-ratio: 9 / 10;
@@ -319,3 +323,27 @@ iframe {
   background-color: #a11212;
 }
 
+/* Events Page */
+#events-main {
+    flex: 4;
+    padding: 1rem;
+    background-image: url("assets/images/night.webp");
+    background-repeat: no-repeat;         
+    background-size: cover;               
+    background-position: center center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#events-main img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.event-description {
+  width: 80%;
+  margin-top: 1.5rem;
+}
