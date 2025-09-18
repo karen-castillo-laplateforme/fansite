@@ -95,6 +95,8 @@ header nav ul li a {
     display: block;          
 }
 
+/* Index */
+
 /* Main content */
 #index-main {
     flex: 4;
@@ -202,6 +204,57 @@ padding: 0.6em 1.4em;
   width: 35px;
 }
 
+/* Medias Page */
+#medias-main {
+    flex: 4;
+    padding: 1rem;
+    background-image: url("../assets/images/sunset.jpg");
+    background-repeat: no-repeat;         
+    background-size: cover;               
+    background-position: center center;
+    color: white;
+}
 
+.images-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colonnes égales */
+  gap: 0.5rem; /* espace entre les images */
+  margin-bottom: 2.5rem;
+}
 
+.images-container img {
+  width: 100%;          /* largeur à 100% de la cellule */
+  height: 200px;        /* hauteur fixe pour toutes les images */
+  object-fit: cover;    /* recadrage centré et zoom pour remplir la boite */
+  border-radius: 8px;   /* coins arrondis optionnels */
+}
 
+.images-container h3 {
+  margin: auto;
+  color: rgb(40, 40, 150);
+}
+
+.images-container h3 span {
+    font-style: italic;
+}
+
+iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 10;
+  max-width: 230px;
+  border-radius: 5px;
+}
+
+.youtube-container {
+  display:grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+    gap: 1rem;
+}
+
+.youtube-container h3{
+    color: rgb(40, 40, 150);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
