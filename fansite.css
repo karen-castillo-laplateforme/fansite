@@ -1,3 +1,4 @@
+/* CSS général */
 body {
   margin: 0;
   padding: 0;
@@ -132,15 +133,26 @@ header nav ul li a {
 }
 
 .insta-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.insta-wrapper {
   width: 100%;
   max-width: 250px;
   margin: 0 auto;
 }
 
-.insta-container .instagram-media {
+.insta-wrapper .instagram-media {
   max-width: 100% !important;
   min-width: 0 !important;
   width: 100% !important;
+}
+
+.concert-img{
+    max-width: 250px;
 }
 
 #news h3{
@@ -155,6 +167,10 @@ header nav ul li a {
 
 #news a{
     background-color: rgb(40, 40, 150);
+}
+
+#news a:hover {
+    background-color: rgb(208, 23, 23);
 }
 
 .quote {
@@ -184,6 +200,10 @@ padding: 0.6em 1.4em;
   text-align: center;
   box-shadow: 0 2px 7px rgba(0,0,0,0.12);
   font-size: 0.9rem;
+}
+
+.btn:hover {
+    background-color: rgb(208, 23, 23);
 }
 
 #gallery a {
@@ -233,10 +253,6 @@ padding: 0.6em 1.4em;
   margin: auto;
   color: rgb(40, 40, 150);
 }
-
-/* #news p:first-of-type,#photos p{
-    line-height: 1.5rem;
-} */
 
 .images-container h3 span {
     font-style: italic;
@@ -346,4 +362,123 @@ padding: 0.6em 1.4em;
 .event-description {
   width: 80%;
   margin-top: 1.5rem;
+}
+
+/* TABLETTE + DESKTOP */
+@media (min-width: 600px) {
+    p{
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+    header nav ul {
+        flex-direction: row; 
+        gap: 1.5rem;       
+    }
+    #introduction {
+        width: 60%;
+        margin: 1rem auto;
+    }
+
+    #index-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .video-container {
+        height: 500px;
+    }
+
+    .video-container iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    #news h3{
+        font-size: 1.8rem;
+    }
+
+   
+
+    .insta-container{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .insta-wrapper {
+       margin: 0;
+      max-width: 360px;
+}
+
+ .concert-container{
+      max-width: 355px;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+.concert-img{
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.btn{
+    padding: 0.9em 1.4em;
+    font-size: 1rem;
+}
+
+#gallery {
+    max-width: 60%;
+}
+
+    #medias-main {
+        padding: 2rem;
+    }
+
+    .images-container img {
+        height: 100%;        /* hauteur fixe pour toutes les images */
+    }
+    
+    .images-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+        gap: 1rem; /* espace entre les images */
+    }
+
+    .images-container h3     { grid-column: 2; grid-row: 1; }
+.images-container img:nth-child(2) { grid-column: 1; grid-row: 2; font-size: 1.7rem; }
+.images-container img:nth-child(3) { grid-column: 2; grid-row: 2; }
+    
+    #photos h2, #photos p:first-of-type {
+        text-align: center;
+    }
+
+    #photos p:first-of-type {
+        margin-bottom: 3rem;
+    }
+
+    .youtube-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+
+    .youtube-container h3{
+      align-self: center;
+      font-size: 1.6rem;
+    }
+
+    #gallery a:hover {
+    background-color: rgb(40, 40, 150);
+}
+
+#social-medias img {
+  width: 45px;
+}
+
 }
